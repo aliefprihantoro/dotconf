@@ -12,7 +12,7 @@ myconfiguration for termux, proot-distro and debian based
 > use pacman for termux for not error. see [in here](https://github.com/alifprihantoro/new-content/tree/master/setup/termux.md/#change-package-manager).
 ```bash
 cd
-git clone --depth=1 https://github.com/alifprihantoro/dotconf .myconf
+git clone --depth=1 https://github.com/aliefprihantoro/dotconf .myconf
 ```
 ### install for termux
 ```bash

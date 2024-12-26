@@ -1,3 +1,5 @@
+# NOTE: use for change timezone
+# dpkg-reconfigure tzdata
 #setup rc
 cat >~/.zshrc <<EOF
 export dr=/data/data/com.termux/files/home
