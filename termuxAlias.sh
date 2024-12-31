@@ -2,6 +2,7 @@ alias open='termux-open '
 alias openb='termux-open-url '
 alias pbcopy='termux-clipboard-set'
 alias pbpaste='$(termux-clipboard-get)'
+alias term='DISPLAY=:0 PULSE_SERVER=127.0.0.1 alacritty'
 
 catc() {
   cat $1 >$2
@@ -9,18 +10,24 @@ catc() {
 catp() {
   cat $1 >>$2
 }
-alias u='
-XDG_RUNTIME_DIR=${TMPDIR} termux-x11 :0 -ac &
-proot-distro login debian --shared-tmp --no-sysvipc
-export DISPLAY=:0
-i3 &
+alias pdl='
+proot-distro login debian
 '
-alias u2='
-virgl_test_server_android --angle-gl &
-XDG_RUNTIME_DIR=${TMPDIR} termux-x11 :0 -ac &
+
+alias uv='
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
 proot-distro login debian --shared-tmp --no-sysvipc
-export DISPLAY=:0 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.6COMPAT MESA_GLES_VERSION_OVERRIDE=3.2
-i3 &
+'
+
+# virgl_test_server_android --angle-gl &
+alias ux='
+proot-distro login debian --shared-tmp --no-sysvipc -- /bin/sh -c "export DISPLAY=:0 PULSE_SERVER=127.0.0.1 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.3 MESA_GLES_VERSION_OVERRIDE=3.2 && i3"
+'
+alias u='
+pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1
+virgl_test_server_android &
+XDG_RUNTIME_DIR=${TMPDIR} termux-x11 :0 -ac &
+ux
 '
 alias sudo='proot-distro login debian -- '
 

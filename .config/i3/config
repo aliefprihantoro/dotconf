@@ -51,6 +51,7 @@ tiling_drag modifier titlebar
 
 # app
 bindsym $mod+s exec --no-startup-id rofi -drun-use-desktop-cache -show drun -refilter-timeout-limit
+# exec --no-startup-id rm ~/.cache/rofi-drun-desktop.cache
 # bindsym $mod+Shift+s exec --no-startup-id echo "hello\nhai\noke" | rofi
 bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 # bindsym $mod+x exec --no-startup-id powermenu_t2
@@ -132,6 +133,8 @@ bindsym $mod+bracketright exec "i3Next"
 bindsym $mod+bracketleft exec "i3Prev"
 bindsym $mod+Shift+bracketright exec "i3MoveNext"
 bindsym $mod+Shift+bracketleft exec "i3MovePrev"
+# bindsym $mod+minus exec "i3RmCurr"
+# bindsym $mod+equal exec "i3Add"
 
 # reload the configuration file
 bindsym $mod+Shift+s reload
@@ -203,6 +206,6 @@ exec mkdir ~/.i3
 exec echo 1 > $HOME/.i3/current_workspace
 exec echo 1 > $HOME/.i3/total_workspace
 # wallpaper
-# exec --no-startup-id nitrogen --set-zoom-fill ~/.i3/wallpaper.jpg --head=0 && nitrogen --set-auto ~/.i3/wallpaper.jpg --head=1
+exec --no-startup-id nitrogen --set-zoom-fill ~/.i3/wallpaper.jpg --head=0 && nitrogen --set-auto ~/.i3/wallpaper.jpg --head=1
 # transparent
-# exec --no-startup-id picom -c
+exec --no-startup-id picom -c --experimental-backends

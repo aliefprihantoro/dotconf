@@ -7,6 +7,7 @@ tar -xvzf postman.tar.gz
 mv Postman .postman
 if [ "$isTermuxProot" != "y" ]; then
   # chromium
+  rm /bin/chromium_real
   mv /bin/chromium /bin/chromium_real
   touch /bin/chromium
   chmod +x /bin/chromium
@@ -19,6 +20,7 @@ else
 fi
 EOF
   # brave
+  rm /bin/brave-browser-stable-bin
   mv /bin/brave-browser-stable /bin/brave-browser-stable-bin
   touch /bin/brave-browser-stable
   chmod +x /bin/brave-browser-stable
