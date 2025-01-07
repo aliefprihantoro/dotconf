@@ -1,4 +1,6 @@
-#!/bin/bash
+#!/bin/sh
 # feh --bg-scale ~/.i3/wallpaper.jpg --head=1 &
-# picom -c &
-# picom -c --experimental-backend &
+updateWallpaper &
+# transparent
+picom -c --experimental-backends &
+kitty

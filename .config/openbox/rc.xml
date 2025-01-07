@@ -178,7 +178,39 @@
   </dock>
   <keyboard>
     <chainQuitKey>C-g</chainQuitKey>
+    <keybind key="A-S-h">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="A-S-l">
+      <action name="MoveResizeTo">
+        <x>50%</x>
+        <width>50%</width>
+      </action>
+    </keybind>
+    <keybind key="A-S-j">
+      <action name="MoveResizeTo">
+        <y>50%</y>
+        <height>50%</height>
+      </action>
+    </keybind>
+    <keybind key="A-S-k">
+      <action name="MoveResizeTo">
+        <y>0</y>
+        <height>50%</height>
+      </action>
+    </keybind>
     <keybind key="A-f">
+      <action name="MoveResizeTo">
+        <x>0</x>
+        <y>0</y>
+        <width>100%</width>
+        <height>100%</height>
+      </action>
+    </keybind>
+    <keybind key="A-S-f">
       <action name="ToggleFullscreen"/>
     </keybind>
     <!-- Keybindings for desktop switching -->
@@ -206,13 +238,13 @@
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Left">
+    <keybind key="S-A-p">
       <action name="SendToDesktop">
         <to>left</to>
         <wrap>no</wrap>
       </action>
     </keybind>
-    <keybind key="S-A-Right">
+    <keybind key="S-A-n">
       <action name="SendToDesktop">
         <to>right</to>
         <wrap>no</wrap>
@@ -289,7 +321,7 @@
     <!-- chrome -->
     <keybind key="A-b">
       <action name="Execute">
-        <command>chromium --no-sandbox --force-dark-mode</command>
+        <command>brave-browser</command>
       </action>
     </keybind>
     <!-- firefox -->

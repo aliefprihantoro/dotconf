@@ -14,6 +14,14 @@ configuration {
   kb-row-down: "Control+j,Down";
   kb-cancel: "Control+c,Escape";
   kb-secondary-copy: "";
+	drun-use-desktop-cache: true;
+	drun {
+		/** Parse user desktop files. */
+		parse-user:   true;
+		/** Parse system desktop files. */
+		parse-system: true;
+    }
 }
 
 @theme "theme.rasi"
+// @theme "style-1.rasi"

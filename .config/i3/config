@@ -58,6 +58,10 @@ bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 
 # start a terminal
 bindsym $mod+Return exec kitty
+# start a browser
+bindsym $mod+b exec brave-browser
+# start a browser
+bindsym $mod+Shift+b exec firefox-nightly
 
 # kill focused window
 bindsym $mod+q kill
@@ -170,6 +174,14 @@ mode "resize" {
 
 bindsym $mod+r mode "resize"
 
+# set custom gap/padding window
+gaps inner 10
+gaps outer 10
+
+# set window title and border size
+for_window [class=".*"] title_format " "
+for_window [class="^.*"] border pixel 3
+
 # Set custom colors
 # class                 border  backgr. text    indicator child_border
 client.focused          #82aaff #82aaff #141313 #2e9ef4   #285577
@@ -183,6 +195,7 @@ client.background       #161617
 # Start i3bar to display a workspace bar (plus the system information i3status
 # finds out, if available)
 bar {
+      padding 1px
   colors {
           background #161617
           statusline #ffffff
@@ -199,13 +212,11 @@ bar {
       # pasink pasource -p time.format="%H:%M"
 }
 
-for_window [class=".*"] title_format " "
-for_window [class="^.*"] border pixel 1
 # sed default workspace
 exec mkdir ~/.i3
 exec echo 1 > $HOME/.i3/current_workspace
 exec echo 1 > $HOME/.i3/total_workspace
 # wallpaper
-exec --no-startup-id nitrogen --set-zoom-fill ~/.i3/wallpaper.jpg --head=0 && nitrogen --set-auto ~/.i3/wallpaper.jpg --head=1
+exec --no-startup-id updateWallpaper
 # transparent
 exec --no-startup-id picom -c --experimental-backends

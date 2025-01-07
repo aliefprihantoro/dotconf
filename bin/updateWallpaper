@@ -3,6 +3,5 @@ local PATH_IMG=$1
 if [ ! -z $PATH_IMG ]; then
   nitrogen --set-zoom-fill $PATH_IMG --head=0 && nitrogen --set-auto $PATH_IMG --head=1
 else
-  PATH_IMG=~/.i3/wallpaper.jpg
-  nitrogen --set-zoom-fill $PATH_IMG --head=0 && nitrogen --set-auto $PATH_IMG --head=1
+  nitrogen --set-zoom-fill --random ~/.i3/wallpaper --save
 fi
