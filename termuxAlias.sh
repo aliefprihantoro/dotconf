@@ -22,7 +22,7 @@ proot-distro login debian --shared-tmp --no-sysvipc
 
 # virgl_test_server_android --angle-gl &
 alias ux='
-proot-distro login debian --shared-tmp --no-sysvipc -- /bin/sh -c "export DISPLAY=:0 PULSE_SERVER=127.0.0.1 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.3 MESA_GLES_VERSION_OVERRIDE=3.2 && i3 & /bin/zsh"
+proot-distro login debian --shared-tmp --no-sysvipc -- /bin/bash -c "export DISPLAY=:0 PULSE_SERVER=127.0.0.1 GALLIUM_DRIVER=virpipe MESA_GL_VERSION_OVERRIDE=4.3 MESA_GLES_VERSION_OVERRIDE=3.2 && i3 & /bin/zsh"
 '
 alias u='
 pulseaudio --start --load="module-native-protocol-tcp auth-ip-acl=127.0.0.1 auth-anonymous=1" --exit-idle-time=-1

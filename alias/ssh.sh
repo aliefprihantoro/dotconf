@@ -2,6 +2,7 @@ portforwad(){
   ssh -L 8081:localhost:8080 -L 8082:localhost:80 root@localhost -p2222
 }
 sshTermux(){
+  eval "$(ssh-agent -s)" && ssh-add ~/.ssh/termux
   ssh 127.0.0.1 -p8022
 }
 

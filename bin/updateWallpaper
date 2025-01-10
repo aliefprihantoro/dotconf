@@ -1,5 +1,5 @@
 #!/bin/bash
-local PATH_IMG=$1
+PATH_IMG=$1
 if [ ! -z $PATH_IMG ]; then
   nitrogen --set-zoom-fill $PATH_IMG --head=0 && nitrogen --set-auto $PATH_IMG --head=1
 else

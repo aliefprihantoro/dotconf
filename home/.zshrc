@@ -1,6 +1,6 @@
 # for change dir whitout cd
 setopt auto_cd
-echo -ne "\033]12;#4a53f0\007" # color
+echo -ne "]12;#4a53f0" # color
 # autocomplete
 autoload -Uz compinit
 compinit
