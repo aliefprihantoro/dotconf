@@ -57,9 +57,9 @@ bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 # bindsym $mod+x exec --no-startup-id powermenu_t2
 
 # start a terminal
-bindsym $mod+Return exec kitty
+bindsym $mod+Return execGALLIUM_DRIVER= kitty
 # start a browser
-bindsym $mod+b exec brave-browser
+bindsym $mod+b exec brave-browser-stable --no-sandbox
 # start a browser
 bindsym $mod+Shift+b exec firefox-nightly
 
@@ -133,10 +133,10 @@ bindsym $mod+Shift+7 exec "i3MoveTo 7"
 bindsym $mod+Shift+8 exec "i3MoveTo 8"
 
 # next prev
-bindsym $mod+bracketright exec "i3Next"
-bindsym $mod+bracketleft exec "i3Prev"
-bindsym $mod+Shift+bracketright exec "i3MoveNext"
-bindsym $mod+Shift+bracketleft exec "i3MovePrev"
+bindsym $mod+n exec "i3Next"
+bindsym $mod+p exec "i3Prev"
+bindsym $mod+Shift+n exec "i3MoveNext"
+bindsym $mod+Shift+p exec "i3MovePrev"
 # bindsym $mod+minus exec "i3RmCurr"
 # bindsym $mod+equal exec "i3Add"
 
@@ -219,4 +219,4 @@ exec echo 1 > $HOME/.i3/total_workspace
 # wallpaper
 exec --no-startup-id updateWallpaper
 # transparent
-exec --no-startup-id picom -c --experimental-backends
+# exec --no-startup-id picom -c --experimental-backends

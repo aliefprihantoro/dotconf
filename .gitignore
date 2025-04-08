@@ -135,3 +135,4 @@ termux/shell
 .config/jgmenu/backup
 .config/jgmenu/append.csv
 .config/i3/bumblebee-status
+home/.termux/bin
