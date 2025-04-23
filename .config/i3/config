@@ -147,6 +147,13 @@ bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -B 'Yes, exit i3' 'i3-msg exit'"
 
+# popup/floating window
+# for_window [class="*"] floating enable
+# for_window [class="*"]  size 300x100
+# for_window [class="*"]  position 100 100
+# floating_minimum_size 75 x 50
+# floating_maximum_size -1 x -1
+
 # resize window (you can also use the mouse for that)
 mode "resize" {
         # These bindings trigger as soon as you enter the resize mode
