@@ -46,3 +46,15 @@ alias shortcut_sync='
 rm -rf ~/.shortcuts
 cp $dc/home/.shortcuts ~/
 '
+
+# updateNodeProot(){
+#   mv $PREFIX/bin/node $PREFIX/bin/node-bin
+#   cat <<EOF
+# #!/data/data/com.termux/files/usr/bin/sh
+# if [ -z "\$IS_PROOT" ]; then
+#   exec /data/data/com.termux/files/usr/bin/node-bin "\$@"
+# else
+#   pd login debian --shared-tmp --no-sysvipc -- node "\$@"
+# fi
+#   EOF
+# }

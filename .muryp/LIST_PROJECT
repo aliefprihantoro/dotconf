@@ -1,15 +1,5 @@
 public project => /data/data/com.termux/files/home//project/public
-router dom => /data/data/com.termux/files/home//project/public/router-dom
 notes => /data/data/com.termux/files/home//project/notes
-daily project => /data/data/com.termux/files/home//project/daily
-conf nvim => /data/data/com.termux/files/home//.config/nvim/lazy
 alifprihantoro => /data/data/com.termux/files/home//project/web/alifprihantoro
 lab => /data/data/com.termux/files/home//project/lab
-learn => /data/data/com.termux/files/home//project/learn
-quest => /data/data/com.termux/files/home//project/web/quest
-configqu => /data/data/com.termux/files/home/.myconfmuryp-file.nvim => /data/data/com.termux/files/home/.config/nvim/lazy/muryp-file.nvim
-muryp-file.nvim => /data/data/com.termux/files/home/.config/nvim/lazy/muryp-file.nvim
-sosmed => /data/data/com.termux/files/home/project/web/sosmed
-pawarta tech => /data/data/com.termux/files/home/project/web/pawartatech
 content => /data/data/com.termux/files/home/project/content
-serabi => /data/data/com.termux/files/home/project/web/serabi

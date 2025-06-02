@@ -219,7 +219,7 @@ Comment[zh_CN]=读取、捕获、广播您的多媒体流
 Name[zh_TW]=VLC 媒體播放器
 GenericName[zh_TW]=媒體播放器
 Comment[zh_TW]=讀取、擷取與廣播您的多媒體串流
-Exec=/usr/bin/vlc-wrapper --started-from-file %U
+Exec=SUDO_UID=1000 /usr/bin/vlc-wrapper --started-from-file %U
 TryExec=/usr/bin/vlc
 Icon=vlc
 Terminal=false

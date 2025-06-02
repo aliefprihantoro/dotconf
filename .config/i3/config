@@ -56,8 +56,10 @@ bindsym $mod+s exec --no-startup-id rofi -drun-use-desktop-cache -show drun -ref
 bindsym $mod+Shift+w exec --no-startup-id rofi -show window
 # bindsym $mod+x exec --no-startup-id powermenu_t2
 
+# start a vlc
+bindsym $mod+m exec SUDO_UID=1000 vlc-wrapper
 # start a terminal
-bindsym $mod+Return execGALLIUM_DRIVER= kitty
+bindsym $mod+Return exec GALLIUM_DRIVER= kitty
 # start a browser
 bindsym $mod+b exec brave-browser-stable --no-sandbox
 # start a browser
