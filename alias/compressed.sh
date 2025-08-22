@@ -1,3 +1,4 @@
+LIST_CMD+=('decompress => decompress')
 decompress() {
   local file="$1"
   local ext="${file##*.}" # Get the extension
@@ -26,6 +27,7 @@ decompress() {
   esac
 }
 
+LIST_CMD+=('compress => compress')
 compress() {
   local file="$1"
   local ext

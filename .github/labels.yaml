@@ -1,0 +1,88 @@
+labels:
+  - name: bug
+    color: d73a4a
+    description: "Something isn't working"
+  - name: feature
+    color: 0e8a16
+    description: "New feature or request"
+  - name: enhancement
+    color: a2eeef
+    description: "Improvement to existing feature"
+  - name: documentation
+    color: 0075ca
+    description: "Documentation only changes"
+  - name: refactor
+    color: cfd3d7
+    description: "Code change that neither fixes a bug nor adds a feature"
+  - name: performance
+    color: fef2c0
+    description: "Performance improvements"
+  - name: test
+    color: 7057ff
+    description: "Adding or fixing tests"
+  - name: help wanted
+    color: 008672
+    description: "Extra attention is needed"
+  - name: in progress
+    color: 1d76db
+    description: "Work in progress"
+  - name: blocked
+    color: e11d21
+    description: "Blocked by other issues"
+  - name: discussion
+    color: 5319e7
+    description: "Needs discussion"
+  - name: auth
+    color: 0052cc
+    description: "Authentication and authorization"
+  - name: ui
+    color: 1d9bf0
+    description: "User interface and design"
+  - name: backend
+    color: 6f42c1
+    description: "Backend or server side"
+  - name: frontend
+    color: 4a90e2
+    description: "Frontend client side"
+  - name: offline
+    color: f9d0c4
+    description: "Offline functionality and sync"
+  - name: import-export
+    color: f6c342
+    description: "Import and export data"
+  - name: security
+    color: d93f0b
+    description: "Security related issues"
+  - name: organization
+    color: bfe5bf
+    description: "Organization and roles management"
+  - name: transactions
+    color: 0052cc
+    description: "Transactions and financial data"
+  - name: reports
+    color: 0e8a16
+    description: "Reports and charts"
+  - name: settings
+    color: 5319e7
+    description: "User and app settings"
+  - name: testing
+    color: 7057ff
+    description: "Testing and quality assurance"
+  - name: "priority: high"
+    color: b60205
+    description: "High priority"
+  - name: 'priority: medium'
+    color: dbab09
+    description: "Medium priority"
+  - name: 'priority: low'
+    color: 0e8a16
+    description: "Low priority"
+  - name: owner
+    color: 5319e7
+    description: "Role: Owner"
+  - name: editor
+    color: 1d9bf0
+    description: "Role: Editor"
+  - name: reviewer
+    color: 8c8c8c
+    description: "Role: Reviewer"

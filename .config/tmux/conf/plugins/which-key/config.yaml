@@ -1,0 +1,149 @@
+# yaml-language-server: $schema=../../../plugins/tmux-which-key/config.schema.yaml
+command_alias_start_index: 200
+keybindings:
+  root_table: C-b
+  prefix_table: Space
+title:
+  style: align=centre,bold
+  prefix: " 󰌆 MAPS "
+  prefix_style: fg=green,align=centre,bold
+position:
+  x: R
+  y: P
+custom_variables:
+  - name: log_info
+    value: "#[fg=green,italics] [info]#[default]#[italics]"
+macros:
+  - name: reload-config
+    commands:
+      - display "#{log_info} Loading config... "
+      - source-file $HOME/.tmux.conf
+      - display -p "\n\n... Press ENTER to continue"
+  - name: restart-pane
+    commands:
+      - display "#{log_info} Restarting pane"
+      - "respawnp -k -c #{pane_current_path}"
+items:
+- name: פּ List Window/Session
+  key: w
+  command: choose-tree -Zw
+- name: 󰯍 Move Window/Pane
+  key: m
+  menu:
+    - name: Back
+      key: BSpace
+      command: 'show-wk-menu-root'
+    - name: 󰒭 Window
+      key: l
+      command: windowMoveNext
+      transient: true
+    - name: 󰒮 Window
+      key: h
+      command: windowMovePrev
+      transient: true
+- separator: true
+- name:  Session
+  key: N
+  command: new-session -c "#{pane_current_path}"
+- name: 󰒭 Session
+  key: C-j
+  command: sessionNext
+- name: 󰒮 Session
+  key: C-k
+  command: sessionPrev
+- separator: true
+- name:  Window
+  key: C-n
+  command: new-window -a -c "#{pane_current_path}"
+- name: 󰒭 Window
+  key: C-l
+  command: windowNext
+- name: 󰒮 Window
+  key: C-h
+  command: windowPrev
+- separator: true
+- name: 󰹗 Toggle Fullscreen
+  key: C-f
+  command: resize-pane -Z
+- name: 󰤼 Split
+  key: s
+  menu:
+    - name: Back
+      key: BSpace
+      command: 'show-wk-menu-root'
+    - name:  Split horizontal
+      key: h
+      command: "splitw -h -c #{pane_current_path}"
+    - name:  Split vertical
+      key: v
+      command: "splitw -v -c #{pane_current_path}"
+- name:  Pane
+  key: p
+  menu:
+    - name: Back
+      key: BSpace
+      command: 'show-wk-menu-root'
+
+    - name:  move
+      key: n
+      command: paneMoveDown
+      transient: true
+    - name:  move
+      key: p
+      command: paneMoveUp
+      transient: true
+    - name: 󰤼 break
+      key: b
+      command: break-pane -d
+    - name:  resize
+      key: H
+      command: resize-pane -L
+      transient: true
+    - name:  resize
+      key: J
+      command: resize-pane -D
+      transient: true
+    - name: 
+      key: K
+      command: resize-pane -U
+      transient: true
+    - name:   resize
+      key: L
+      command: resize-pane -R
+      transient: true
+    - name:  goto
+      key: h
+      command: select-pane -L
+      transient: true
+    - name:  goto
+      key: j
+      command: select-pane -D
+      transient: true
+    - name:  goto
+      key: k
+      command: select-pane -U
+      transient: true
+    - name:  goto
+      key: l
+      command: select-pane -R
+      transient: true
+- separator: true
+- name: 󰗼 Kill Pane
+  key: q
+  command: confirm-before "kill-pane"
+- name: 󰗼 Kill Server
+  key: Q
+  command: confirm-before "kill-server"
+- name:  Reload Config
+  key: R
+  command: source-file ~/.config/tmux/tmux.conf \; display "Config Reloaded !"
+- name:  Toggle Status
+  key: P
+  command: set -g status
+- separator: true
+- name: 󰘳 Command
+  key: ;
+  command: command-prompt
+- name:  fzf
+  key: f
+  command: run-shell ~/.config/tmux/plugins/tmux-fzf/main.sh

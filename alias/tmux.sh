@@ -1,3 +1,6 @@
+TMUX_CONF="$HOME/.config/tmux/"
+alias tmuxInstallPlugin='bash $TMUX_CONF/bin/installTPM.bash'
+alias tmuxUpdatePlugin='bash $TMUX_CONF/bin/updateConf.bash'
 alias t='tmux'
 alias ta='tmux attach'
 alias tks='tmux kill-server'

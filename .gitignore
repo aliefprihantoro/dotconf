@@ -136,3 +136,4 @@ termux/shell
 .config/jgmenu/append.csv
 .config/i3/bumblebee-status
 home/.termux/bin
+.config/tmux/plugins

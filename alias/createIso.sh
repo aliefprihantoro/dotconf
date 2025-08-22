@@ -1,3 +1,4 @@
+LIST_CMD+=('convert iso to chd => convert_iso_to_chd')
 convert_iso_to_chd() {
   local input_iso="$1"
   local output_chd=$(echo $1 | sed 's/\.iso$/.chd/')
