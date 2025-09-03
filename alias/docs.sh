@@ -1,0 +1,1 @@
+alias daisyui:docs='cd /data/data/com.termux/files/home/project/clone/daisyui/packages/docs/build && live-server'

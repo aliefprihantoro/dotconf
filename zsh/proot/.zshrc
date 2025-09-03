@@ -56,3 +56,9 @@ case ":$PATH:" in
 esac
 
 export SUDO_UID=1000
+# bun completions
+[ -s "/root/.bun/_bun" ] && source "/root/.bun/_bun"
+
+# bun
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
