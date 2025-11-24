@@ -1,11 +1,20 @@
 # for change dir whitout cd
 setopt auto_cd
 echo -ne "]12;#4a53f0" # color
-# autocomplete
-autoload -Uz compinit
+# Autoload dasar
+autoload -Uz compinit add-zsh-hook
 compinit
+# Completion (dioptimalkan)
 zstyle ':completion:*' menu select
+zstyle ':completion:*' matcher-list 'm:{a-z}={A-Z}'
+zstyle ':completion:*' rehash true
 zmodload zsh/complist
+# Compinit dengan cache agar cepat
+if [[ -n ${ZDOTDIR:-$HOME}/.zcompdump(#qN.mh+24) ]]; then
+  compinit -u
+else
+  compinit -u -C
+fi
 # use the vi navigation keys in menu completion
 bindkey -M menuselect 'h' vi-backward-char
 bindkey -M menuselect 'k' vi-up-line-or-history
@@ -16,12 +25,25 @@ ZVM_VI_INSERT_ESCAPE_BINDKEY=jj
 
 # prom shell
 MYZSHPLUG=$dc/zsh/plugins
+# Instant prompt: taruh di paling atas sebelum konfigurasi berat (versi aman)
+# Jika file ini ada, pk10 akan menampilkan prompt lebih cepat
+if [[ -r ~/.cache/p10k-instant-prompt-$USER.zsh ]]; then
+  source ~/.cache/p10k-instant-prompt-$USER.zsh
+fi
 source $dr/powerlevel10k/powerlevel10k.zsh-theme
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f $MYZSHPLUG/p10k.zsh ]] || source $MYZSHPLUG/p10k.zsh
+
+function load_heavy_plugins() {
+  add-zsh-hook -d precmd load_heavy_plugins
+  source $MYZSHPLUG/autopair.zsh
+  source $MYZSHPLUG/syntax-hilight/fast-syntax-highlighting.plugin.zsh
+  # zsh autocomplete
+  source $MYZSHPLUG/zsh-autosuggestions.zsh
+}
+
+add-zsh-hook precmd load_heavy_plugins
 source $MYZSHPLUG/zsh-vi-mode.plugin.zsh
-source $MYZSHPLUG/autopair.zsh
-source $MYZSHPLUG/syntax-hilight/fast-syntax-highlighting.plugin.zsh
 
 # auto pair
 AUTOPAIR_LBOUNDS=(all '[.:/\!]')
@@ -39,9 +61,6 @@ AUTOPAIR_RBOUNDS+=(braces '')
 # tabtab source for packages
 # uninstall by removing these lines
 [[ -f ~/.config/tabtab/zsh/__tabtab.zsh ]] && . ~/.config/tabtab/zsh/__tabtab.zsh || true
-
-# zsh autocomplete
-source $MYZSHPLUG/zsh-autosuggestions.zsh
 
 # ENV
 # pnpm

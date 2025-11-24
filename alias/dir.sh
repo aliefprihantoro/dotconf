@@ -26,3 +26,7 @@ addFolder() {
   local CURR_PATH=$(pwd)
   echo "$NAME => $CURR_PATH" >>$HOME/.muryp/LIST_PROJECT
 }
+LIST_CMD+=('delete node_modules => deleteNodeModules')
+deleteNodeModules(){
+find . -name "node_modules" -type d -prune -exec rm -rf '{}' +
+}

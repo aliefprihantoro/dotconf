@@ -6,6 +6,7 @@
 	signingkey = /data/data/com.termux/files/home/.ssh/signkey.pub
 [core]
 	editor = nvim
+	pager = less
 [init]
 	defaultBranch = main
 [gpg]

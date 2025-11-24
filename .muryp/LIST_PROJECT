@@ -3,3 +3,6 @@ notes => /data/data/com.termux/files/home//project/notes
 alifprihantoro => /data/data/com.termux/files/home//project/web/alifprihantoro
 lab => /data/data/com.termux/files/home//project/lab
 content => /data/data/com.termux/files/home/project/content
+web => /data/data/com.termux/files/home/project/web
+ => /data/data/com.termux/files/home/project/clone
+clone => /data/data/com.termux/files/home/project/clone

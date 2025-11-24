@@ -44,7 +44,7 @@ pg_ctl -D $PREFIX/var/lib/postgresql stop
 '
 alias shortcut_sync='
 rm -rf ~/.shortcuts
-cp $dc/home/.shortcuts ~/
+cp $dc/.shortcuts ~/
 '
 
 # updateNodeProot(){
